@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: bloom-filter
+
+  redis:
+    cluster:
+      nodes: node-101:6379,node-102:6379,node-101:6379,node-101:6380,node-102:6380,node-103:6380
