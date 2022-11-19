@@ -7,8 +7,10 @@
     <file url="file://$PROJECT_DIR$/common-jdbc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common-util/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/thread-pool/src/main/java" charset="UTF-8" />
     <file url="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/2.7.5/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gexingw.mybatis.mapper.OrderMapper">
+
+    <resultMap type="com.gexingw.common.jdbc.entity.Order" id="OrderMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="customerId" column="customerId" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="state" column="state" jdbcType="INTEGER"/>
+        <result property="payTime" column="pay_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <resultMap type="com.gexingw.common.jdbc.entity.Order" id="searchResult">
+        <result property="id" column="id"/>
+        <result property="customerId" column="customerId"/>
+        <result property="userId" column="user_id"/>
+        <result property="state" column="state"/>
+        <result property="payTime" column="payTime" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="isDeleted" column="is_deleted"/>
+    </resultMap>
+
+    <sql id="searchColumns">
+        id, customer_id, user_id,
+               state,
+               pay_time,
+               create_time,
+               update_time,
+               is_deleted
+    </sql>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="OrderMap">
+        select
+        <include refid="searchColumns"/>
+        from order
+        where id = #{id}
+    </select>
+
+    <select id="searchPage" resultType="com.gexingw.common.jdbc.entity.Order">
+        select id,
+        customer_id,
+        user_id,
+        state,
+        pay_time,
+        create_time,
+        update_time,
+        is_deleted
+        from `order`
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+
+            <choose>
+                <when test="state == 0">
+                    and state = 0
+                </when>
+                <when test="state == 1">
+                    and state = 1
+                </when>
+                <otherwise>
+                    and state = 2
+                </otherwise>
+            </choose>
+        </where>
+
+    </select>
+
+
+</mapper>
+

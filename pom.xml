@@ -25,6 +25,7 @@
         <hutool.version>5.8.9</hutool.version>
         <redisson.version>3.17.7</redisson.version>
         <guava.version>23.0</guava.version>
+        <pagehelper.version>1.4.5</pagehelper.version>
 
         <common-module.version>0.0.1-SNAPSHOT</common-module.version>
     </properties>
@@ -33,6 +34,8 @@
         <module>common-jdbc</module>
         <module>common-util</module>
         <module>bloom-filter</module>
+        <module>thread-pool</module>
+        <module>mybatis</module>
     </modules>
 
     <dependencies>
@@ -102,6 +105,13 @@
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

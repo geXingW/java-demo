@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mybatis
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.100.101:3306/demo
+    username: gexingw
+    password: 12345678
+
+
+mybatis:
+  mapper-locations: classpath:mybatis/**.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+pagehelper:
+  helper-dialect: mysql  #????
+  reasonable: true # ?????
+  support-methods-arguments: true
+  offset-as-page-num: true # ?????`offset`?????`pageNum`
+  row-bounds-with-count: true # row-bounds ??????`count`??
