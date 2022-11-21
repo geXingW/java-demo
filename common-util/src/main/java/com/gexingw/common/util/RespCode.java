@@ -12,9 +12,17 @@ import lombok.Getter;
 @Getter
 public enum RespCode {
     // 正常响应
-    SUCCESS(200000, "success"),
+    SUCCESS(200000, "操作成功！"),
 
-    FAILURE(500000, "failure"),
+    // 异常响应
+    FAILURE(500000, "系统异常，请稍后重试！"),
+
+    QUERY_FAILURE(500001, "查询失败！"),
+    CREAT_FAILURE(500002, "插入失败！"),
+    UPDATE_FAILURE(500003, "更新失败！"),
+    DELETE_FAILURE(500004, "删除失败！"),
+    JOB_PAUSE_FAILURE(500005, "Job暂停失败！"),
+    JOB_RESUME_FAILURE(500006, "Job重启失败！"),
     ;
 
     private final int code;

@@ -36,6 +36,7 @@
         <module>bloom-filter</module>
         <module>thread-pool</module>
         <module>mybatis</module>
+        <module>quartz</module>
     </modules>
 
     <dependencies>
