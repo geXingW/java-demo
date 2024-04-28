@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: web-service-server
+
+cxf:
+  path: /web-service

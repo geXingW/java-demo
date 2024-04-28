@@ -18,7 +18,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
         <druid.version>1.2.14</druid.version>
         <mysql-connector.version>8.0.31</mysql-connector.version>
         <mybatis-spring-boot.version>2.2.2</mybatis-spring-boot.version>
@@ -34,7 +34,6 @@
         <module>common-jdbc</module>
         <module>common-util</module>
         <module>bloom-filter</module>
-        <module>thread-pool</module>
         <module>mybatis</module>
         <module>quartz</module>
         <module>aop</module>
