@@ -28,6 +28,8 @@
         <pagehelper.version>1.4.5</pagehelper.version>
 
         <common-module.version>0.0.1-SNAPSHOT</common-module.version>
+
+        <power-mockito.version>2.0.9</power-mockito.version>
     </properties>
 
     <modules>
@@ -37,26 +39,10 @@
         <module>mybatis</module>
         <module>quartz</module>
         <module>aop</module>
+        <module>diff-util</module>
     </modules>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -123,6 +109,20 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
                 <version>3.1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito2</artifactId>
+                <version>${power-mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${power-mockito.version}</version>
+                <scope>test</scope>
             </dependency>
 
 
