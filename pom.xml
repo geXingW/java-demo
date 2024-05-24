@@ -40,6 +40,7 @@
         <module>quartz</module>
         <module>aop</module>
         <module>diff-util</module>
+        <module>sort-alg</module>
     </modules>
 
     <dependencies>
