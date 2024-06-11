@@ -41,6 +41,7 @@
         <module>aop</module>
         <module>diff-util</module>
         <module>sort-alg</module>
+        <module>leetcode</module>
     </modules>
 
     <dependencies>

@@ -29,23 +29,27 @@ public class ReentrantReadWriteLockCase {
         System.out.println("释放写锁");
 
         // 读锁等待写锁
-        Thread thread1 = new Thread("读锁等待写锁") {
+        Thread thread1 = new Thread("thread-1") {
             @Override
             public void run() {
                 readLock.lock();
-                System.out.println("读锁等待写锁，读锁加锁成功！");
+
+                String threadName = Thread.currentThread().getName();
+                System.out.println(threadName + ": 读锁等待写锁，读锁加锁成功！");
 
 
                 readLock.unlock();
-                System.out.println("读锁等待写锁，读锁释放成功！");
+                System.out.println(threadName + ": 读锁等待写锁，读锁释放成功！");
             }
         };
 
-        Thread thread2 = new Thread("读锁等待写锁") {
+        Thread thread2 = new Thread("thread-2") {
             @Override
             public void run() {
                 writeLock.lock();
-                System.out.println("读锁等待写锁，写锁加锁成功！");
+
+                String threadName = Thread.currentThread().getName();
+                System.out.println(threadName + ": 读锁等待写锁，写锁加锁成功！");
 
                 try {
                     Thread.sleep(4000);
@@ -54,7 +58,7 @@ public class ReentrantReadWriteLockCase {
                 }
 
                 writeLock.unlock();
-                System.out.println("读锁等待写锁，写锁释放成功！");
+                System.out.println(threadName + ": 读锁等待写锁，写锁释放成功！");
             }
         };
 
