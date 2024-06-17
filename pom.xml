@@ -42,6 +42,9 @@
         <module>diff-util</module>
         <module>sort-alg</module>
         <module>leetcode</module>
+        <module>unit-test</module>
+        <module>web-service</module>
+        <module>lock</module>
     </modules>
 
     <dependencies>
